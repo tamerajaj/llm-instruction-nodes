@@ -1,5 +1,5 @@
 
-# LLM Demo for instructions -> nodes mapping, with Gradio 
+# LLM Demo for "Instructions -> Nodes mapping", with Gradio 
 
 A demonstration of running a Large Language Model (LLM) using PyTorch, Gradio, and Hugging Face libraries. This setup includes:
 
@@ -112,7 +112,7 @@ ChatGPT (including variants `chatgpt-o1`, `chatgpt-4o`) and GitHub Copilot were 
 
 ---
 
-## Next steps Improvements
+## Next steps and potential improvements
 
 1. Add unit tests  
 2. Improve speed by using smaller models  
