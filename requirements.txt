@@ -1,0 +1,11 @@
+transformers
+python-dotenv
+torch
+torchvision
+torchaudio
+evaluate
+nltk
+gradio
+bitsandbytes
+accelerate
+rouge_score
