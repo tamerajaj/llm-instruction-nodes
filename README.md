@@ -105,6 +105,22 @@ The Gradio app will launch on [http://localhost:7860](http://localhost:7860).
 - **Gradio UI**: Defines text boxes for input, predicted output, expected output, and a metrics display box. Also includes buttons for generating responses, evaluating metrics, and clearing fields.
 
 ---
+## Testing
+
+Simple **unit tests**and **integration tests** are included.
+To run them, use:
+```bash
+pytest src/tests
+```
+
+If you face memory issues, run them separately using:
+
+```bash
+pytest .\src\tests\test_integration.py
+
+pytest .\src\tests\test_unit.py
+```
+---
 
 ## AI Assistance tools:
 
@@ -114,7 +130,7 @@ ChatGPT (including variants `chatgpt-o1`, `chatgpt-4o`) and GitHub Copilot were 
 
 ## Next steps and potential improvements
 
-1. Add unit tests  
+1. Improve tests
 2. Improve speed by using smaller models  
 3. Enhance how evaluation results are displayed in Gradio  
 4. Try additional evaluation approaches  
