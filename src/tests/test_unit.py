@@ -15,8 +15,7 @@ def test_compute_metrics_basic():
     # TODO: add assert for rouge and bleu
 
 def test_load_model_no_crash():
-    # In a real scenario, mock HF calls or use a very small model
-    model_name = "google/gemma-2-2b-it"  # or any local small model
+    model_name = "google/gemma-2-2b-it"
     model, tokenizer = load_model(model_name)
     assert model is not None
     assert tokenizer is not None
