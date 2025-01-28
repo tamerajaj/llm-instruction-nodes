@@ -1,7 +1,7 @@
 import gradio as gr
 
-from evaluate_llm import compute_metrics
-from llm import load_model, llm_inference
+from src.app.evaluate_llm import compute_metrics
+from src.app.llm import load_model, llm_inference
 
 
 model_name = "google/gemma-2-2b-it"

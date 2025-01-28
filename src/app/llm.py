@@ -9,8 +9,8 @@ from transformers import (
     BitsAndBytesConfig,
 )
 
-from evaluate_llm import compute_metrics
-from prompts import prompt
+from src.app.evaluate_llm import compute_metrics
+from src.app.prompts import prompt
 
 
 def load_model(
@@ -72,6 +72,7 @@ def llm_inference(
         task="text-generation",
         model=model,
         tokenizer=tokenizer,
+        device_map="auto"
     )
 
     # Generate text

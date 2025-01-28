@@ -7,14 +7,14 @@ ENV GRADIO_SERVER_NAME="0.0.0.0" \
     PYTHONDONTWRITEBYTECODE=1
 
 # Create and use the /app directory
-WORKDIR /app
+WORKDIR /usr/src
 
 # Copy and install Python dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the application code
-COPY ./app /app
+COPY ./src ./src
 
 # Declare a volume for model storage
 VOLUME ["/model_storage"]
@@ -22,5 +22,7 @@ VOLUME ["/model_storage"]
 # Expose the default Gradio port
 EXPOSE 7860
 
+ENV PYTHONPATH="/usr/src:$PYTHONPATH"
+
 # Run the Gradio app
-CMD ["python", "gradio_app.py"]
+CMD ["python", "src/app/gradio_app.py"]
